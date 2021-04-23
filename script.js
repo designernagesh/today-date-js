@@ -1,6 +1,6 @@
 // Today's Date
 let todayDateDiv = document.getElementById("todayDateDiv");
-const todayDate = () => {
+const todayDate = () => { 
   let days = ['Sunday', 'Monday', 'Tuesday',  'Wednesday',  'Thursday',  'Friday',  'Saturday'],
       months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],      
       dates = new Date(),
