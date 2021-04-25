@@ -31,22 +31,23 @@ const todayDate = () => {
   let extension = ['st', 'nd', 'rd', 'th'],
       dateToString = dt.toString(),
       dateSplit = dateToString.split(""),
-      lastDigit = dateSplit[dateSplit.length-1];
+      lastDigit = dateSplit[dateSplit.length-1];      
+      addExtension = extension[0];
   
-  if( lastDigit == 1 ){    
-    addExtension = extension[0];
-  }
-  else if( lastDigit == 2 ){        
-    addExtension = extension[1];
-  }
-  if( lastDigit == 3 ){    
-    addExtension = extension[2];
-  }
-  else if( lastDigit == 0 || lastDigit == 4){        
-    addExtension = extension[3];
-  }  
-  let fullDate = `${checkDay()}, ${dt}<sup>${addExtension}</sup> ${checkMonth()}, ${y}`;
-  todayDateDiv.innerHTML = fullDate; 
+      if( lastDigit == 1 ){    
+        addExtension = extension[0];
+      }
+      else if( lastDigit == 2 ){        
+        addExtension = extension[1];
+      }
+      if( lastDigit == 3 ){    
+        addExtension = extension[2];
+      }
+      else if( lastDigit == 0 || lastDigit == 4 || lastDigit == 5 || lastDigit == 6 || lastDigit == 7 || lastDigit == 8 || lastDigit == 9){        
+        addExtension = extension[3];
+      }  
+      let fullDate = `${checkDay()}, ${dt}<sup>${addExtension}</sup> ${checkMonth()}, ${y}`;
+      todayDateDiv.innerHTML = fullDate; 
 }
 
 // Calling Today's Date Function 
